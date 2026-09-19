@@ -1,0 +1,49 @@
+name: test
+
+# The README carries a "tests passing" badge. Until this workflow existed,
+# nothing was checking that claim. Now something is.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: {}
+
+jobs:
+  unit:
+    name: Unit and fuzz
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Build
+        run: forge build --sizes
+
+      # ProxyResolution forks Base mainnet over a public RPC, so it is not a
+      # gate: a rate-limited or flaky endpoint would turn main red for a
+      # reason that has nothing to do with the contracts. It runs in the job
+      # below instead, where a failure is visible but not fatal.
+      - name: Test
+        run: forge test --no-match-contract ProxyResolution -vv
+
+  fork:
+    name: Base fork (not a gate)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Proxy resolution against live USDC
+        run: forge test --match-contract ProxyResolution -vv

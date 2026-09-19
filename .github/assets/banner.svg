@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="TrustLens Contracts: PaymentGate on Base Sepolia. Pay per scan at 0.0005 ETH, or a thirty day pass at 0.005 ETH. Built, deployed and dark while the scanner is free.">
+  <title>TrustLens Contracts</title>
+  <desc>PaymentGate is the on-chain payment layer for the TrustLens scanner. It offers a single scan for 0.0005 ETH and a thirty day unlimited pass for 0.005 ETH, is deployed to Base Sepolia at 0x93F37c9af6b4dB4c51DD3CD1a742a4D9AdC878Ca, and is unaudited and switched off while the product is in free beta.</desc>
+
+  <defs>
+    <linearGradient id="tl-pop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF4B5C"/><stop offset="1" stop-color="#FFD23F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" rx="16" fill="#2A1721"/>
+  <rect x="0.5" y="0.5" width="1199" height="299" rx="15.5" fill="none" stroke="#4A2B3A"/>
+
+  <g transform="translate(66 106) scale(0.92)">
+    <circle cx="48" cy="34" r="30" fill="url(#tl-pop)"/>
+    <path d="M48,4 A30 30 0 0 1 48,64 A15 15 0 0 1 48,34 A8 8 0 0 0 48,18 A23 23 0 0 0 48,4 Z" fill="#FFF6E9" opacity="0.9"/>
+    <rect x="44.5" y="60" width="7" height="34" rx="3.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="38" cy="24" r="5.5" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+
+  <text x="180" y="126" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#FFF6E9" letter-spacing="-1">TrustLens Contracts</text>
+  <text x="182" y="162" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="19" fill="#B79AA6">The payment layer, written and dark</text>
+  <circle cx="189" cy="192" r="5" fill="#FFD23F"/>
+  <text x="203" y="198" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#B79AA6">Deployed to Base Sepolia. Unaudited. Not collecting.</text>
+
+  <text x="660" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#B79AA6">PaymentGate.sol  TWO WAYS TO PAY</text>
+  <g transform="translate(660 60)">
+    <rect width="474" height="78" rx="10" fill="#3E2230" stroke="#4A2B3A"/>
+    <text x="18" y="26" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFD23F" letter-spacing="0.08em">PAY PER SCAN</text>
+    <text x="18" y="52" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFF6E9">0.0005 ETH</text>
+    <text x="18" y="70" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#B79AA6">One deep report, for one address.</text>
+  </g>
+  <g transform="translate(660 152)">
+    <rect width="474" height="78" rx="10" fill="#3E2230" stroke="#4A2B3A"/>
+    <text x="18" y="26" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFB84D" letter-spacing="0.08em">MONTHLY PASS</text>
+    <text x="18" y="52" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFF6E9">0.005 ETH</text>
+    <text x="18" y="70" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#B79AA6">Thirty days, no per-scan charge.</text>
+  </g>
+  <text x="660" y="268" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#B79AA6">0x93F37c9af6b4dB4c51DD3CD1a742a4D9AdC878Ca</text>
+</svg>

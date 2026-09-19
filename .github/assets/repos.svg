@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 530" width="1200" height="530" role="img" aria-label="How the four TrustLens repositories fit together: the web app calls the backend, the backend reads Base and an AI triage API, a keep-warm cron pings the backend every ten minutes, and the contracts sit dark while the product is in free beta.">
+  <title>The four repositories</title>
+  <desc>trustlens-web is a static Vite bundle on Cloudflare that posts to trustlens-backend, a FastAPI service on Render that runs Slither and an AI triage pass. The backend reads verified source and proxy storage slots from Base. trustlens-keepwarm is a scheduled GitHub Action that curls the backend health endpoint every ten minutes so the free tier does not sleep. trustlens-contracts holds PaymentGate on Base Sepolia; both dashed payment paths are switched off while FREE_BETA is on.</desc>
+  <defs>
+    <marker id="tl-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FFD23F"/></marker>
+    <marker id="tl-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9B6E80"/></marker>
+  </defs>
+  <rect width="1200" height="530" rx="16" fill="#2A1721"/>
+  <rect x="0.5" y="0.5" width="1199" height="529" rx="15.5" fill="none" stroke="#5C3848"/>
+  <text x="48" y="42" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFF6E9">Four repositories. One of them is switched off on purpose.</text>
+  <text x="48" y="66" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#C6A6BC">Solid arrows are what runs today. The dashed ones are the payment path: written, tested, deployed to Base Sepolia, and dark while the scanner is free.</text>
+  <rect x="48" y="104" width="282" height="128" rx="12" fill="#3E2230" stroke="#5C3848" stroke-width="1.5"/>
+  <text x="66" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#FFD23F">trustlens-web</text>
+  <text x="66" y="151" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#FFF6E9">the page people use</text>
+  <text x="66" y="174" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">React, Vite, wagmi and viem</text>
+  <text x="66" y="191" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">A static bundle on Cloudflare</text>
+  <text x="66" y="208" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">trustlens-web.niftyai.workers.dev</text>
+  <rect x="470" y="104" width="282" height="128" rx="12" fill="#3E2230" stroke="#5C3848" stroke-width="1.5"/>
+  <text x="488" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#FFD23F">trustlens-backend</text>
+  <text x="488" y="151" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#FFF6E9">the scan and the triage</text>
+  <text x="488" y="174" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">FastAPI, Slither, an AI pass</text>
+  <text x="488" y="191" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Render's free tier</text>
+  <text x="488" y="208" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Sleeps after 15 minutes idle</text>
+  <rect x="870" y="104" width="282" height="128" rx="12" fill="none" stroke="#6E4356" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="888" y="128" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#FFF6E9">not in any of the repos</text>
+  <text x="888" y="154" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Base RPC, for the proxy slots</text>
+  <text x="888" y="174" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Basescan, for verified source</text>
+  <text x="888" y="194" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">An AI API, for the triage pass</text>
+  <rect x="48" y="320" width="592" height="116" rx="12" fill="#3E2230" stroke="#5C3848" stroke-width="1.5"/>
+  <text x="66" y="348" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#FFB84D">trustlens-contracts</text>
+  <text x="66" y="367" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#FFF6E9">the money, when it is switched on</text>
+  <text x="66" y="390" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Foundry. PaymentGate deployed to Base Sepolia at 0x93F3...78Ca</text>
+  <text x="66" y="407" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Pay per scan, or a monthly pass. The backend verifies a ScanPurchased</text>
+  <text x="66" y="424" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">receipt and consumes the payment id once, so it cannot be replayed.</text>
+  <rect x="750" y="320" width="402" height="116" rx="12" fill="#3E2230" stroke="#5C3848" stroke-width="1.5"/>
+  <text x="768" y="348" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#FFD23F">trustlens-keepwarm</text>
+  <text x="768" y="367" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#FFF6E9">one cron, one curl</text>
+  <text x="768" y="390" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">A scheduled GitHub Action, every ten minutes.</text>
+  <text x="768" y="407" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">Its own repo for the free Actions minutes, which</text>
+  <text x="768" y="424" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#C6A6BC">the backend repo now gets too.</text>
+  <text x="400" y="150" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#FFD23F">POST /scan/address</text>
+  <text x="394" y="166" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#FFD23F">POST /report/address</text>
+  <path d="M330 184 L462 184" stroke="#FFD23F" stroke-width="2" fill="none" marker-end="url(#tl-a)"/>
+  <text x="811" y="160" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#FFD23F">reads</text>
+  <path d="M752 184 L862 184" stroke="#FFD23F" stroke-width="2" fill="none" marker-end="url(#tl-a)"/>
+  <path d="M951 320 L951 272 L700 272 L700 240" stroke="#FFD23F" stroke-width="2" fill="none" marker-end="url(#tl-a)"/>
+  <text x="836" y="264" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#FFD23F">GET /health, every 10 min</text>
+  <path d="M189 232 L189 312" stroke="#9B6E80" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#tl-d)"/>
+  <text x="204" y="268" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#B08497">purchaseScan(target)</text>
+  <text x="204" y="284" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#B08497">off while FREE_BETA is on</text>
+  <path d="M560 232 L560 312" stroke="#9B6E80" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#tl-d)"/>
+  <text x="545" y="268" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#B08497">verify_and_consume()</text>
+  <text x="545" y="284" text-anchor="end" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#B08497">and hasActivePass</text>
+  <text x="48" y="470" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#C6A6BC">The keep-warm cron exists because Render's free tier sleeps after fifteen minutes and a cold start is the worst first impression a scanner can make.</text>
+  <text x="48" y="492" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#C6A6BC">GitHub disables a scheduled workflow after sixty days with no pushes to its repo, and the cron itself does not count as a push. Only a commit re-arms it.</text>
+</svg>

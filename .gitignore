@@ -3,7 +3,7 @@ out/
 cache/
 broadcast/*/*/dry-run/
 
-# Secrets — never commit
+# Secrets: never commit
 .env
 .env.*
 !.env.example
